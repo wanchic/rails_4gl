@@ -1,6 +1,6 @@
-# Rails4gl
+# Rails 4GL
 
-TODO: Write a gem description
+This is add-on gem to rails to implment 4th generational language programming
 
 ## Installation
 
@@ -10,7 +10,7 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Currently, I am focusing on generators and building a development roadmap to hit version 1.0
 
 ## Contributing
 
