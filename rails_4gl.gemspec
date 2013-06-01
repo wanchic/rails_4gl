@@ -7,9 +7,9 @@ Gem::Specification.new do |gem|
   gem.name          = "rails_4gl"
   gem.version       = Rails4gl::VERSION
   gem.authors       = ["Eric Wanchic"]
-  gem.email         = ["ewanchic@elifestream.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.email         = ["eric@wanchic.com"]
+  gem.description   = %q{Implement rails 4th generational language programming}
+  gem.summary       = %q{Implement rails 4th generational language programming}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

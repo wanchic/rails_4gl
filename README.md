@@ -1,6 +1,6 @@
 # Rails 4GL
 
-This is add-on gem to rails to implment 4th generational language programming
+This is add-on gem to rails to implement 4th generational language programming
 
 ## Installation
 
