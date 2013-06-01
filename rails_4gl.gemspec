@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Rails4gl::VERSION
   gem.authors       = ["Eric Wanchic"]
   gem.email         = ["eric@wanchic.com"]
-  gem.description   = %q{Implement rails 4th generational language programming}
-  gem.summary       = %q{Implement rails 4th generational language programming}
+  gem.summary       = %q{Rails 4th generational language programming}
+  gem.description   = %q{Implement rails 4th generational language programming through the use of scaffolds, suggested best coding practices, and the use of mapped design patterns}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
