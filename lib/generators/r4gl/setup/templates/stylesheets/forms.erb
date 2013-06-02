@@ -1,0 +1,76 @@
+@import 'globals.css.scss';
+@import 'functions.css.scss';
+
+@mixin field_share() {
+  margin: 3px 5px;
+  float: left;
+}
+
+@mixin field_label() {
+  padding: 2.5px 0;
+  margin-top: 0.3em;
+  clear: both;
+  text-align: right;
+}
+
+@mixin field_div() {
+  div.fl, div.fd { @include field_share; }
+  div.fl { @include field_label;  }
+}
+
+@mixin field_dl() {
+  dt, dd { @include field_share; }
+  dt { @include field_label; }
+}
+
+form {
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  fieldset {
+    margin: 0;
+    padding: 1em;
+
+    margin-bottom: 20px;
+    border: 1px #000000 solid;
+
+    legend {
+      padding: 0.2em 0.5em;
+      border:1px solid green;
+      color:green;
+      font-size: .9em;
+      text-align:left;
+    }
+
+    @include field_div;
+    @include field_dl;
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      @include main_font_style();
+    }
+
+    input[type=text] {
+      padding: 2px;
+      margin: 0 -3px;
+
+      @include main_font;
+
+      border:1px solid darkgrey;
+      @include border_radius(4px);
+      @include box_shadow(2px, 2px, 3px, black);
+
+
+      &:focus {
+        border:1px solid #009aff;
+        @include box_glow(0, 0, 11px, #78d1ff);
+      }
+
+    }
+
+  }
+}

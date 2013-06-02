@@ -1,0 +1,75 @@
+@mixin header_style($color, $bgcolor, $border-color) {
+  width: 450px;
+
+  color: $color;
+  background-color: $bgcolor;
+
+  border: 2px $border-color solid;
+
+  padding: 0.3em;
+  padding-left: 1.5em;
+}
+
+div.main_message {
+  .alert {
+    @include header_style(#803c00, lightyellow, #ffd900);
+  }
+
+  .notice {
+    @include header_style(#007000, #d5ffd5, #00f200);
+  }
+
+}
+
+div.error_message {
+  @include header_style(black, #f0f0f0, red);
+
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px;
+    padding-left: 1.5em;
+    font-size: 0.9em;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 0.9em;
+    list-style: square;
+  }
+
+}
+
+div.field_with_errors {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+label.error {
+  color: black;
+  background-color: #ffb8b5;
+  border: 2px red solid;
+
+  padding: 0.1em 0.2em;
+  margin-right: -0.3em;
+}
+
+input[type=text].error {
+  border:2px solid red;
+  @include box_shadow(2px, 2px, 3px, darkred);
+
+
+  &:focus {
+    border:2px solid red;
+    @include box_glow(0, 0, 11px, pink);
+  }
+
+}
