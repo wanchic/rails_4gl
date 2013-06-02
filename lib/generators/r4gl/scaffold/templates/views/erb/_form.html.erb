@@ -1,0 +1,21 @@
+<%%= form_for(@<%= instance_name %>) do |f| %>
+  <%%= render partial: 'helpers/form_errors', locals: { model: @<%= instance_name %>, name: @model } %>
+
+<%- model_attributes.each do |attribute| -%>
+  <%% field_length = (t('activerecord.attributes.<%= instance_name %>.<%= attribute.name %>')).length * @fl_param  #Pick one %>
+<%- end -%>
+  <%%= render partial: 'helpers/field_length', locals: { length: field_length } %>
+
+  <fieldset>
+    <legend><%= class_name %> Information</legend>
+    <dl>
+      <%- model_attributes.each do |attribute| -%>
+      <dt><%%= f.label :<%= attribute.name %> %></dt><dd><%%= f.<%= attribute.field_type %> :<%= attribute.name %> %></dd>
+      <%- end -%>
+    </dl>
+  </fieldset>
+
+  <%%= render partial: 'helpers/form_submit', locals: { parent: parent, f: f,
+                                                       return_path: return_path } %>
+
+<%% end %>

@@ -1,0 +1,4 @@
+<%% title "#{t 'mvc.create'} #{@model.capitalize}" %>
+
+<%%= render partial: 'form', locals: { parent: 'new', return_path: <%= instances_name %>_path } %>
+

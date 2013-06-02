@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      <%= instance_name %>: <%= instance_name.capitalize %>
+
+    attributes:
+      <%= instance_name %>:
+        <%- model_attributes.each do |attribute| -%>
+        <%= attribute.name %>: <%= attribute.name.capitalize %>
+        <%- end -%>

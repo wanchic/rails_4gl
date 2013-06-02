@@ -1,0 +1,29 @@
+<%% title @model.pluralize.capitalize %>
+
+<%% if @<%= instances_name %>.count() == 0 %>
+  <p><%%= t '.no_items', model: @model.pluralize.downcase %></p>
+
+<%% else %>
+  <table>
+    <tr>
+      <%- model_attributes.each do |attribute| -%>
+      <th><%%= t 'activerecord.attributes.<%= instance_name %>.<%= attribute.name %>' %></th>
+      <%- end -%>
+    </tr>
+
+  <%% @<%= instances_name %>.each do |<%= instance_name %>| %>
+    <tr>
+      <%- model_attributes.each do |attribute| -%>
+      <td><%%= link_to <%= instance_name %>.<%= attribute.name %>, <%= instance_name %> %></td>
+      <%- end -%>
+    </tr>
+  <%% end %>
+
+  </table>
+
+<%% end %>
+
+
+<br />
+
+<%%= link_to t('helpers.submit.create', model: @model.capitalize), new_<%= instance_name %>_path, class: 'create' %>

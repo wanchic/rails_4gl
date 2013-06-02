@@ -1,0 +1,3 @@
+<%% title "#{t 'mvc.edit'} #{@model.capitalize} - #{@<%= instance_name %>.name}" %>
+
+<%%= render partial: 'form', locals: { parent: 'edit', return_path: <%= instance_name %>_path(@<%= instance_name %>) } %>

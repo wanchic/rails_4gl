@@ -1,0 +1,6 @@
+<%% title "#{@model.capitalize} - #{@<%= instance_name %>.name}" %>
+
+<%%= link_to "#{t('mvc.edit')} #{@model}", edit_<%= instance_name %>_path(@<%= instance_name %>), class: 'create' %>
+<%%= link_to "#{t('mvc.delete')} #{@<%= instance_name %>.name}", @<%= instance_name %>, class: 'remove',
+            method: :delete, data: { confirm: t('mvc_msg.confirm_delete', record: @<%= instance_name %>.name) } %>
+<%%= link_to "#{t('mvc.return_to_list')}", <%= instances_name %>_path, class: 'list' %>
