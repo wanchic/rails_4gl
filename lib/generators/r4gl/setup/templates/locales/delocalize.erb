@@ -1,0 +1,45 @@
+en:
+  number:
+    format:
+      separator: '.'
+      delimiter: ','
+
+  date:
+    input:
+      formats:
+        - :default
+        - :long
+        - :short
+
+    formats:
+      default:  "%m/%d/%Y"
+      short: "%b %e"
+      long: "%B %e, %Y"
+      only_day: "%e"
+
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Sun, Mon, Tue, Wed, Thr, Fri, Sat]
+    month_names: [~, Janurary, Feburary, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    order:
+      - :month
+      - :day
+      - :year
+
+  time:
+    input:
+      formats:
+        - :long
+        - :medium
+        - :short
+        - :default
+        - :time
+
+    formats:
+      default: "%A, %B e%, %Y  %H:%M Hr"
+      short: "%B %e, %H:%M Hr"
+      long: "%A, %B %e, %Y  %H:%M Hr"
+      time: "%H:%M"
+
+    am: "morning"
+    pm: "afternoon"
