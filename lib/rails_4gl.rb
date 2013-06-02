@@ -1,5 +1,3 @@
 require "rails_4gl/version"
-
-module Rails4gl
-  # Your code goes here...
-end
+require 'rails_4gl/railtie'
+require 'rails_4gl/controller'
