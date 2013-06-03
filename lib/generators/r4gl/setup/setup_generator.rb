@@ -114,6 +114,10 @@ module R4gl
 
       end
 
+      def default_test
+        remove_file 'test'  # Remove Test Unit
+      end
+
       private
 
       def destination_path(path)
