@@ -106,6 +106,14 @@ module R4gl
 
       end
 
+      def default_initializers
+
+        %w[field_error_proc].each do |file|
+          template "initializers/#{file}.rb", "config/initializers/#{file}.rb"
+        end
+
+      end
+
       private
 
       def destination_path(path)
