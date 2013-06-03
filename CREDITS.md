@@ -20,6 +20,7 @@
 ## Examples
 * https://github.com/ryanb/nifty-generators
 * https://github.com/indirect/rails3-generators
+* http://stackoverflow.com/questions/7574400/why-bundle-install-fails-in-rails-generator
 
 
 # Extending Classes
@@ -32,3 +33,17 @@
 * https://github.com/plataformatec/devise
 * http://railsforum.com/viewtopic.php?pid=155065#p155065
 
+# General Syntax
+
+## Ruby
+* http://railsforum.com/viewtopic.php?id=8347
+* http://stackoverflow.com/questions/3686032/how-to-create-directories-recursively-in-ruby
+
+## Rails
+
+# Miscellaneous
+
+## Definitions
+* http://stackoverflow.com/questions/3712214/insert-line-into-file-using-rails-templates
+* http://stackoverflow.com/questions/3686032/how-to-create-directories-recursively-in-ruby
+* http://stackoverflow.com/questions/2088480/modify-a-file-with-a-rails-generator
