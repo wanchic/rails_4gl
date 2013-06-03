@@ -1,0 +1,11 @@
+<%% if model.errors.any? %>
+  <div id="error_message" class="error_message">
+    <h2><%%= t 'errors.template.header', count: model.errors.count, model: name %></h2>
+
+    <ul>
+      <%% model.errors.full_messages.each do |msg| %>
+        <li><%%= msg %></li>
+      <%% end %>
+    </ul>
+  </div>
+<%% end %>

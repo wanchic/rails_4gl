@@ -1,0 +1,13 @@
+<%% if !notice.nil? || !alert.nil? %>
+  <div class="clear"></div>
+  <div id="main_message" class="main_message">
+    <%% unless notice.nil? %>
+      <p id="notice" class="notice"><%%= notice %></p>
+    <%% end %>
+
+    <%% unless alert.nil? %>
+      <p id="alert" class="alert"><%%= alert %></p>
+    <%% end %>
+
+  </div>
+<%% end %>

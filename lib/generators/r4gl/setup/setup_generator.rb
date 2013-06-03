@@ -76,6 +76,20 @@ module R4gl
 
       end
 
+      def default_views
+        remove_file 'app/views/layouts/application.html.erb'
+        template "views/layouts/application.html.erb", "app/views/layouts/application.html.erb"
+
+        %w[field_length form_errors form_submit].each do |file|
+          template "views/helpers/_#{file}.html.erb", "app/views/helpers/_#{file}.html.erb"
+        end
+
+        %w[footer header message].each do |file|
+          template "views/layouts/_#{file}.html.erb", "app/views/layouts/_#{file}.html.erb"
+        end
+
+      end
+
       private
 
       def destination_path(path)
