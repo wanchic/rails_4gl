@@ -62,6 +62,22 @@ module R4gl
       end
 
       def default_stylesheets
+        env_data = <<-DATA
+  # Add the fonts path
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts', '**')
+
+  # Precompile additional assets
+  config.assets.precompile += %w(.svg .eot .woff .ttf)
+        DATA
+
+        sub_file 'config/environments/development.rb',
+                 search = "config.active_record.auto_explain_threshold_in_seconds = 0.5",
+                 "#{search}\n\n#{env_data}"
+
+        sub_file 'config/environments/production.rb',
+                 search = "config.serve_static_assets = false",
+                 "#{search}\n\n#{env_data}"
+
         remove_file 'app/assets/stylesheets/application.css'
 
         %w[application layout].each do |file|
