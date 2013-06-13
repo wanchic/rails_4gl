@@ -81,6 +81,12 @@ module R4gl
             template 'locales/model.erb', "config/locales/models/#{model_path}/en.yml"
           end
 
+          if test_framework == :rspec
+            #generate "rspec:model #{scaffold_name} #{model_attributes.map { |a| "#{a.name}:#{a.type}" }.join(" ")}"
+            template "rspec/model_spec.rb", "spec/models/#{model_path}_spec.rb"
+          end
+
+
           #if test_framework == :rspec
           #  template "tests/rspec/model.rb", "spec/models/#{model_path}_spec.rb"
           #  template 'fixtures.yml', "spec/fixtures/#{model_path.pluralize}.yml"
@@ -100,6 +106,8 @@ module R4gl
       def create_controller
         unless options.skip_controller?
           template 'controller.rb', "app/controllers/#{plural_name}_controller.rb"
+
+          generate "rspec:controller #{scaffold_name} #{controller_actions.map { |a| "#{a}" }.join(" ")}"
 
           unless options.skip_helper?
             template 'helper.rb', "app/helpers/#{plural_name}_helper.rb"

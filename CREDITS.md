@@ -21,6 +21,7 @@
 * https://github.com/ryanb/nifty-generators
 * https://github.com/indirect/rails3-generators
 * http://stackoverflow.com/questions/7574400/why-bundle-install-fails-in-rails-generator
+* http://stackoverflow.com/questions/6794697/rails-3-generate-scaffold-for-specific-actions-only
 
 
 # Extending Classes
@@ -38,6 +39,12 @@
 ## Ruby
 * http://railsforum.com/viewtopic.php?id=8347
 * http://stackoverflow.com/questions/3686032/how-to-create-directories-recursively-in-ruby
+* http://stackoverflow.com/questions/2434885/ruby-concatenate-strings-and-add-spaces
+* http://stackoverflow.com/questions/8282096/ruby-how-to-concatenate-array-of-arrays-into-one
+* http://stackoverflow.com/questions/1036018/flatten-an-array-of-hashes-in-ruby
+* http://stackoverflow.com/questions/4000713/tell-the-end-of-a-each-loop-in-ruby
+* http://www.rubyinside.com/21-ruby-tricks-902.html
+
 
 ## Rails
 
