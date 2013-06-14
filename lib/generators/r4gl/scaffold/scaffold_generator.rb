@@ -104,6 +104,7 @@ module R4gl
 
           unless options.skip_helper?
             template 'helper.rb', "app/helpers/#{plural_name}_helper.rb"
+            template "rspec/helper_spec.rb", "spec/helpers/#{model_path.pluralize}_helper_spec.rb" if test_framework == :rspec
           end
 
           unless options.stylesheet?
