@@ -1,7 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :<%= instances_name %> do
+  factory :<%= instances_name.singularize %> do
     <%- model_attributes.each do |attribute| -%>
     <%- case attribute.type
               when :string, :text         ; ds = "'Sample Text'"

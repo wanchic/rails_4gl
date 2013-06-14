@@ -10,6 +10,6 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe <%= class_name %>Helper do
+describe <%= class_name.pluralize %>Helper do
   pending "add some examples to (or delete) #{__FILE__}"
 end
