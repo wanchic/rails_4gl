@@ -135,12 +135,9 @@ module R4gl
           route namespaces.reverse.inject("resources :#{resource}") { |acc, namespace|
             "namespace(:#{namespace}){ #{acc} }"
           }
+          template "rspec/routing_spec.rb", "spec/routing/#{model_path}_routing_spec.rb" if test_framework == :rspec
 
-          #if test_framework == :rspec
-          #  template "tests/#{test_framework}/controller.rb", "spec/controllers/#{plural_name}_controller_spec.rb"
-          #else
-          #  template "tests/#{test_framework}/controller.rb", "test/functional/#{plural_name}_controller_test.rb"
-          #end
+
         end
       end
 
