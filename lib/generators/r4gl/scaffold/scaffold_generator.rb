@@ -84,16 +84,9 @@ module R4gl
           if test_framework == :rspec
             #generate "rspec:model #{scaffold_name} #{model_attributes.map { |a| "#{a.name}:#{a.type}" }.join(" ")}"
             template "rspec/model_spec.rb", "spec/models/#{model_path}_spec.rb"
+            template "rspec/factory.rb", "spec/factories/#{model_path.pluralize}.rb"
           end
 
-
-          #if test_framework == :rspec
-          #  template "tests/rspec/model.rb", "spec/models/#{model_path}_spec.rb"
-          #  template 'fixtures.yml', "spec/fixtures/#{model_path.pluralize}.yml"
-          #else
-          #  template "tests/#{test_framework}/model.rb", "test/unit/#{model_path}_test.rb"
-          #  template 'fixtures.yml', "test/fixtures/#{model_path.pluralize}.yml"
-          #end
         end
       end
 

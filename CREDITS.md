@@ -20,6 +20,7 @@
 ## Examples
 * https://github.com/ryanb/nifty-generators
 * https://github.com/indirect/rails3-generators
+* https://github.com/rspec/rspec-rails/blob/master/lib/generators
 * http://stackoverflow.com/questions/7574400/why-bundle-install-fails-in-rails-generator
 * http://stackoverflow.com/questions/6794697/rails-3-generate-scaffold-for-specific-actions-only
 
