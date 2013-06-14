@@ -99,8 +99,9 @@ module R4gl
       def create_controller
         unless options.skip_controller?
           template 'controller.rb', "app/controllers/#{plural_name}_controller.rb"
+          template "rspec/controller_spec.rb", "spec/controllers/#{model_path.pluralize}_controller_spec.rb" if test_framework == :rspec
 
-          generate "rspec:controller #{scaffold_name} #{controller_actions.map { |a| "#{a}" }.join(" ")}"
+          #generate "rspec:controller #{scaffold_name} #{controller_actions.map { |a| "#{a}" }.join(" ")}"
 
           unless options.skip_helper?
             template 'helper.rb', "app/helpers/#{plural_name}_helper.rb"
