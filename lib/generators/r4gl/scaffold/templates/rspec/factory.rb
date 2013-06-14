@@ -4,17 +4,17 @@ FactoryGirl.define do
   factory :<%= instances_name.singularize %> do
     <%- model_attributes.each do |attribute| -%>
     <%- case attribute.type
-              when :string, :text         ; ds = "'Sample Text'"
-              when :integer               ; ds = 00010
-              when :float, :decimal       ; ds = 1.23456
-              when :datetime, :timestamp  ; ds = "8/22/1998 14:41"
-              when :time                  ; ds = "14:41"
-              when :date                  ; ds = "8/22/1998"
-              when :binary                ; ds = 1
-              when :boolean               ; ds = true
+              when :string, :text         ; ds = 'SecureRandom.hex'
+              when :integer               ; ds = 'rand(903814893)'
+              when :float, :decimal       ; ds = 'rand(903814893) + rand()'
+              when :datetime, :timestamp  ; ds = 'Time.at(rand * Time.now.to_i)'
+              when :time                  ; ds = '(Time.at(rand * Time.now.to_i)).strftime("%m/%d/%Y")'
+              when :date                  ; ds = '(Time.at(rand * Time.now.to_i)).strftime("%H:%M")'
+              when :binary                ; ds = '[0, 1].sample'
+              when :boolean               ; ds = '[true, false].sample'
               else                        ; ds = "'Unknown'"
             end -%>
-    <%= attribute.name %> <%= ds %>
+    <%= attribute.name %> { <%= ds %> }
     <%- end -%>
   end
 end

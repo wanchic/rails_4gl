@@ -1,7 +1,7 @@
   describe 'POST :create' do
     context "with valid params" do
       before do
-        post :create, {:<%= instances_name.singularize %> => valid_attributes}, valid_session
+        post :create, {:<%= instances_name.singularize %> => FactoryGirl.attributes_for(:<%= instances_name.singularize %>)}, valid_session
       end
 
       it "assigns a newly created <%= instances_name.singularize %> as @<%= instances_name.singularize %>" do
@@ -11,10 +11,6 @@
 
       it "redirects to the created <%= instances_name.singularize %>" do
         response.should redirect_to(<%= class_name %>.last)
-      end
-
-      it "returns http success" do
-        response.should be_success
       end
 
     end

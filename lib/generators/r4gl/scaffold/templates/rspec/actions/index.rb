@@ -9,7 +9,7 @@
 
     context "with 1 record" do
       it "returns http success" do
-        <%= instances_name.singularize %> = <%= class_name %>.create! valid_attributes
+        <%= instances_name.singularize %> = FactoryGirl.create(:<%= instances_name.singularize %>)
         get :index, {}, valid_session
         response.should be_success
       end
