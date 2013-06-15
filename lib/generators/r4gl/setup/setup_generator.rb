@@ -47,6 +47,7 @@ module R4gl
           template "locales/#{file}.erb", "config/locales/defaults/#{file}/en.yml"
         end
 
+        template "locales/layouts.erb", "config/locales/views/layouts/en.yml"
       end
 
       def default_fonts
@@ -106,11 +107,9 @@ module R4gl
 
       end
 
-      def default_initializers
-
-        %w[field_error_proc].each do |file|
-          template "initializers/#{file}.rb", "config/initializers/#{file}.rb"
-        end
+      def default_application
+        template "application/controller.rb", "app/controllers/application_controller.rb"
+        template "application/helper.rb", "app/helpers/application_helper.rb"
 
       end
 
