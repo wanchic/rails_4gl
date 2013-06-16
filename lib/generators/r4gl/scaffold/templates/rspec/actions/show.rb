@@ -1,7 +1,7 @@
   describe 'GET :show' do
     before do
       @<%= instances_name.singularize %> =  FactoryGirl.create(:<%= instances_name.singularize %>)
-      get :show, {:id => <%= instances_name.singularize %>.to_param}, valid_session
+      get :show, {:id => @<%= instances_name.singularize %>.to_param}, valid_session
     end
 
     it "assigns the requested <%= instances_name.singularize %> as @<%= instances_name.singularize %>" do

@@ -71,4 +71,6 @@
 * http://www.dzone.com/snippets/date-time-format-ruby
 * http://stackoverflow.com/questions/5071078/how-to-create-a-time-object-with-specific-time-in-ruby-1-8-7
 
+## Debugging
 
+* http://stackoverflow.com/questions/5069677/how-do-i-run-only-specific-tests-in-rspec
