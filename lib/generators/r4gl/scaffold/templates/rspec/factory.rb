@@ -8,8 +8,8 @@ FactoryGirl.define do
               when :integer               ; ds = 'rand(903814893)'
               when :float, :decimal       ; ds = 'rand(903814893) + rand()'
               when :datetime, :timestamp  ; ds = 'Time.at(rand * Time.now.to_i)'
-              when :time                  ; ds = '(Time.at(rand * Time.now.to_i)).strftime("%m/%d/%Y")'
-              when :date                  ; ds = '(Time.at(rand * Time.now.to_i)).strftime("%H:%M")'
+              when :date                  ; ds = '(Time.at(rand * Time.now.to_i)).strftime("%m/%d/%Y")'
+              when :time                  ; ds = '(Time.at(rand * Time.now.to_i)).strftime("%H:%M")'
               when :binary                ; ds = '[0, 1].sample'
               when :boolean               ; ds = '[true, false].sample'
               else                        ; ds = "'Unknown'"

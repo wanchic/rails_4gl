@@ -110,7 +110,7 @@ module R4gl
       def default_application
         template "application/controller.rb", "app/controllers/application_controller.rb"
         template "application/helper.rb", "app/helpers/application_helper.rb"
-
+        template "application/helper_spec.rb", "spec/helpers/application_helper_spec.rb"
       end
 
       def default_test
