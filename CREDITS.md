@@ -49,7 +49,7 @@
 * http://www.rubyinside.com/21-ruby-tricks-902.html
 * Thomas, Dave, with Chad Fowler and Andy Hunt. "Part IV - Ruby Library Reference. 27.Built-in Classes and Modules." Programming Ruby 1.9. The Pragmatic Programmers, LLC., 2010. 415-431, 513-523. Print-PDF.
 * http://ruby-doc.org/core-2.0/Array.html
-
+* http://railsforum.com/viewtopic.php?id=36613
 
 ## Rails
 * http://stackoverflow.com/questions/7781174/rspec-validation-failed-attribute-cant-be-blank-but-it-isnt-blank

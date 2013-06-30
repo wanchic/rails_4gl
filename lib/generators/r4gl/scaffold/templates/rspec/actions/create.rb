@@ -1,15 +1,15 @@
   describe 'POST :create' do
     context "with valid params" do
       before do
-        post :create, {:<%= instances_name.singularize %> => FactoryGirl.attributes_for(:<%= instances_name.singularize %>)}, valid_session
+        post :create, {:<%= instance_name %> => FactoryGirl.attributes_for(:<%= instance_name %>)}, valid_session
       end
 
-      it "assigns a newly created <%= instances_name.singularize %> as @<%= instances_name.singularize %>" do
-        assigns(:<%= instances_name.singularize %>).should be_a(<%= class_name %>)
-        assigns(:<%= instances_name.singularize %>).should be_persisted
+      it "assigns a newly created <%= instance_name %> as @<%= instance_name %>" do
+        assigns(:<%= instance_name %>).should be_a(<%= class_name %>)
+        assigns(:<%= instance_name %>).should be_persisted
       end
 
-      it "redirects to the created <%= instances_name.singularize %>" do
+      it "redirects to the created <%= instance_name %>" do
         response.should redirect_to(<%= class_name %>.last)
       end
 
@@ -18,11 +18,12 @@
     context "with invalid params" do
       before do
         <%= class_name %>.any_instance.stub(:save).and_return(false)
-        post :create, {:<%= instances_name.singularize %> => {} }, valid_session
+        #post :create, {:<%= instance_name %> => {} }, valid_session
+        post :create, {:<%= instance_name %> => FactoryGirl.attributes_for(:<%= instance_name %>)}, valid_session
       end
 
-      it "assigns a newly created but unsaved <%= instances_name.singularize %> as @<%= instances_name.singularize %>" do
-        assigns(:<%= instances_name.singularize %>).should be_a_new(<%= class_name %>)
+      it "assigns a newly created but unsaved <%= instance_name %> as @<%= instance_name %>" do
+        assigns(:<%= instance_name %>).should be_a_new(<%= class_name %>)
       end
 
       it "re-renders the :new template" do

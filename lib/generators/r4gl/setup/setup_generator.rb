@@ -15,6 +15,7 @@ module R4gl
 
         #add_gem "seedbank"
         #add_gem "delocalize"
+        add_gem "delocalize", path: '~/Projects/delocalize'
 
         Bundler.with_clean_env do
           run "bundle install"
@@ -31,10 +32,10 @@ module R4gl
         sub_file 'features/support/env.rb', search = "require 'cucumber/rails'", "#{search}\n\n#{code}\n"
       end
 
-      def configure_seedbank
-        template "gems/seeds.erb", "db/seeds.rb"
-        Dir.mkdir "db/seeds" unless File.exists?("db/seeds")
-      end
+      #def configure_seedbank
+      #  template "gems/seeds.erb", "db/seeds.rb"
+      #  Dir.mkdir "db/seeds" unless File.exists?("db/seeds")
+      #end
 
       def default_i18t
         code = "config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]"

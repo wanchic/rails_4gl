@@ -1,29 +1,30 @@
-  describe 'PUT :update' do
+  describe 'PATCH :update' do
     context "with valid params" do
       before do
-        @<%= instances_name.singularize %> =  FactoryGirl.create(:<%= instances_name.singularize %>)
-        put :update, {:id => @<%= instances_name.singularize %>.to_param, :<%= instances_name.singularize %> => FactoryGirl.attributes_for(:<%= instances_name.singularize %>) }, valid_session
+        @<%= instance_name %> =  FactoryGirl.create(:<%= instance_name %>)
+        patch :update, {:id => @<%= instance_name %>.to_param, :<%= instance_name %> => FactoryGirl.attributes_for(:<%= instance_name %>) }, valid_session
       end
 
-      it "assigns the requested <%= instances_name.singularize %> as @<%= instances_name.singularize %>" do
-        assigns(:<%= instances_name.singularize %>).should eq(@<%= instances_name.singularize %>)
+      it "assigns the requested <%= instance_name %> as @<%= instance_name %>" do
+        assigns(:<%= instance_name %>).should eq(@<%= instance_name %>)
       end
 
-      it "redirects to the <%= instances_name.singularize %>" do
-        response.should redirect_to(@<%= instances_name.singularize %>)
+      it "redirects to the <%= instance_name %>" do
+        response.should redirect_to(@<%= instance_name %>)
       end
 
     end
 
     context "with invalid params" do
       before do
-        @<%= instances_name.singularize %> =  FactoryGirl.create(:<%= instances_name.singularize %>)
+        @<%= instance_name %> =  FactoryGirl.create(:<%= instance_name %>)
         <%= class_name %>.any_instance.stub(:save).and_return(false)
-        put :update, {:id => @<%= instances_name.singularize %>.to_param, :<%= instances_name.singularize %> => {} }, valid_session
+        #patch :update, {:id => @<%= instance_name %>.to_param, :<%= instance_name %> => {} }, valid_session
+        patch :update, {:id => @<%= instance_name %>.to_param, :<%= instance_name %> => FactoryGirl.attributes_for(:<%= instance_name %>) }, valid_session
       end
 
-      it "assigns the <%= instances_name.singularize %> as @<%= instances_name.singularize %>" do
-        assigns(:<%= instances_name.singularize %>).should eq(@<%= instances_name.singularize %>)
+      it "assigns the <%= instance_name %> as @<%= instance_name %>" do
+        assigns(:<%= instance_name %>).should eq(@<%= instance_name %>)
       end
 
       it "re-renders the :edit template" do

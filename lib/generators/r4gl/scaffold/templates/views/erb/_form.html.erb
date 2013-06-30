@@ -10,7 +10,17 @@
     <legend><%= class_name %> Information</legend>
     <dl>
       <%- model_attributes.each do |attribute| -%>
-      <dt><%%= f.label :<%= attribute.name %> %></dt><dd><%%= f.<%= attribute.field_type %> :<%= attribute.name %> %></dd>
+      <%- case attribute.type
+            when 'integer'               ; ft = :number_field
+            when 'float', 'decimal'      ; ft = :text_field
+            when 'time'                  ; ft = :time_select
+            when 'datetime', 'timestamp' ; ft = :datetime_select
+            when 'date'                  ; ft = :date_select
+            when 'text'                  ; ft = :text_area
+            when 'boolean'               ; ft = :check_box
+            else                         ; ft = :text_field
+          end -%>
+      <dt><%%= f.label :<%= attribute.name %> %></dt><dd><%%= f.<%= ft %> :<%= attribute.name %> %></dd>
       <%- end -%>
     </dl>
   </fieldset>
