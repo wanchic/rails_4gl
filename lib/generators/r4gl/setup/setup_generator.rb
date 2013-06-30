@@ -13,8 +13,8 @@ module R4gl
         add_gem "database_cleaner", group: :test
         add_gem "simplecov", group: :test, require: false
 
-        add_gem "seedbank"
-        add_gem "delocalize"
+        #add_gem "seedbank"
+        #add_gem "delocalize"
 
         Bundler.with_clean_env do
           run "bundle install"

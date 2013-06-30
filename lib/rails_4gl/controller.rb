@@ -13,7 +13,7 @@ module Rails4gl
     end
 
     def set_field_length_param
-      @fl_param = 1.1
+      @fl_param = 0.62
     end
 
     private
